@@ -4,9 +4,15 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 
-
+from dotenv import load_dotenv
 import os
-os.environ['GROQ_API_KEY'] = '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'
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the API key from the environment variable
+api_key = os.getenv('GROQ_API_KEY')
+# print(api_key)
 
 llm = ChatGroq(temperature=0, model_name="llama-3.1-70b-versatile")
 
