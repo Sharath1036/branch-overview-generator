@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://Sharath1036:$HF_TOKEN@huggingface.co/spaces/Sharath1036/engineering-branch-explorer
+        run: git push https://Sharath1036:$HF_TOKEN@huggingface.co/spaces/Sharath1036/engineering-branch-explorer
